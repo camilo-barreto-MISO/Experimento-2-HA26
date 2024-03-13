@@ -1,0 +1,446 @@
+{
+	"info": {
+		"_postman_id": "681171e9-d97c-4efa-9d11-ca25a2d0b065",
+		"name": "Experimento-2-HA26-setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16163575"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "CrearUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"prueba\",\r\n    \"contraseña\":\"1234\" ,\r\n    \"tipo_usuario\":\"basico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/crear_usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"crear_usuario"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CrearUsuario-basico",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\":\"runfast\",\r\n    \"contraseña\":\"1234\" ,\r\n    \"tipo_usuario\":\"basico\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/usuarios/crear_usuario",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"crear_usuario"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "CrearUsuario-premium",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\":\"sportacus\",\r\n    \"contraseña\":\"5678\" ,\r\n    \"tipo_usuario\":\"premium\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/usuarios/crear_usuario",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"crear_usuario"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Autenticar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "usuario",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "contrasenia",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuarios/autenticar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"autenticar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Autenticar-premiun",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "sportacus",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "5678",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/usuarios/autenticar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"autenticar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Autenticar-basico",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "runfast",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/usuarios/autenticar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"usuarios",
+										"autenticar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Deportistas",
+			"item": [
+				{
+					"name": "obtener-eventos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "usuario",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "contrasenia",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/deportistas/eventos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deportistas",
+								"eventos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "obtener-eventos-basico",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "runfast",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/deportistas/eventos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"deportistas",
+										"eventos"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "obtener-eventos-premiun",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "sportacus",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "5678",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/deportistas/eventos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"deportistas",
+										"eventos"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "agendar-entrenamiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "usuario",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "contrasenia",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/deportistas/agendar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deportistas",
+								"agendar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "agendar-entrenamiento-basico",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "runfast",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "1234",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entrenador\":\"camilo gomez\",\r\n    \"fecha\": \"2024-04-01 10:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/deportistas/agendar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"deportistas",
+										"agendar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "agendar-entrenamiento-premium",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "usuario",
+										"value": "sportacus",
+										"type": "text"
+									},
+									{
+										"key": "contrasenia",
+										"value": "5678",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"entrenador\":\"roberto lopez\",\r\n    \"fecha\": \"2024-04-01 10:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/deportistas/agendar",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"deportistas",
+										"agendar"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}

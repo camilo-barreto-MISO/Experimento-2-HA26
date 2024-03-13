@@ -1,0 +1,21 @@
+services:
+  gateway:
+   image: nginx:1.18.0
+   ports:
+     - "8080:80"
+   volumes:
+     - ./gateway/nginx.conf:/etc/nginx/conf.d/default.conf
+  
+  autenticador:
+   build: ./autenticador
+   volumes:
+    - ./autenticador:/src
+   working_dir: /src/
+   command: flask run --host=0.0.0.0
+
+  
+  deportistas:
+    build: ./deportistas
+    volumes:
+      - ./deportistas:/src
+    command: flask run --host=0.0.0.0
