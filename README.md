@@ -1,4 +1,4 @@
-# Experimento-2-HA26
+# Experimento-2-HA26 – Usuario deportista intenta acceder a servicios de un plan superior
 
 Para correr el experimento siga los siguientes pasos:
 1. Clone el repositorio en su máquina local
